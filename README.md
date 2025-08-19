@@ -1,6 +1,6 @@
-# 📊 Student Performance Tracking API (Django + DRF + MySQL)
+# Student Performance Tracking API (Django + DRF + MySQL)
 
-## 🚀 Project Overview
+##  Project Overview
 This project is a backend API built with **Django REST Framework** and **MySQL** to manage student performance.  
 It allows you to:  
 - Add students  
@@ -11,7 +11,7 @@ It allows you to:
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Backend**: Django, Django REST Framework  
 - **Database**: MySQL  
 - **Language**: Python 3  
@@ -19,7 +19,7 @@ It allows you to:
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 ```
 student_service/
 │── manage.py
@@ -37,19 +37,14 @@ student_service/
 
 ## ⚙️ Setup Instructions
 
-### 1️⃣ Create a virtual environment
+### 1️ Create a virtual environment
 ```bash
 python -m venv venv
 source venv/bin/activate   # Mac/Linux
 venv\Scripts\activate      # Windows
-```
 
-### 2️⃣ Install dependencies
-```bash
-pip install -r requirements.txt
-```
 
-### 3️⃣ Configure Database (MySQL)
+### 2 Configure Database (MySQL)
 In `student_service/settings.py`, update:
 ```python
 DATABASES = { 
@@ -73,38 +68,38 @@ DATABASES = {
 } 
 ```
 
-### 4️⃣ Apply migrations
-```bash
+### 4️3 Apply migrations
+
 python manage.py makemigrations
 python manage.py migrate
-```
 
-### 5️⃣ Run the server
-```bash
+
+### 5️4 Run the server
+
 python manage.py runserver
-```
+
 
 ---
 
-## 📌 API Endpoints
+##  API Endpoints
 
-### 🧑 Student APIs
+### Student APIs
 - `POST /api/students/` → Add a new student  
 - `GET /api/students/` → List all students  
 - `GET /api/students/{id}/performance/` → Get average score & latest test for a student  
 
-### 📝 Test APIs
+### Test APIs
 - `POST /api/tests/` → Add a new test result   
 
-### 🏆 Top Performers
+### Top Performers
 - `GET /api/students/top-performers/?limit=3` → Fetch top students (using ORM)  
 - `GET /api/students/top-performers-sql/?limit=3` → Fetch top students (using raw SQL)  
 
 ---
 
-## 📊 Example Responses
+### Example Responses
 
-### ➤ Create Student
+### Create Student
 Request:
 ```json
 {
@@ -124,7 +119,7 @@ Response:
 }
 ```
 
-### ➤ Top Performers
+### Top Performers
 ```json
 [
   {"student": "Alice", "average_score": 85.5},
@@ -134,7 +129,7 @@ Response:
 
 ---
 
-## 💡 Bonus
+## Bonus
 - Implemented **Raw SQL Query** (`top-performers-sql`) to fetch top students directly using SQL joins and aggregation.  
 - Shows flexibility of using both **ORM** and **SQL** approaches.  
 
