@@ -1,6 +1,6 @@
-# ⚠️ Issue: FieldError in `top-performers` API
+#  Issue: FieldError in `top-performers` API
 
-## 🔍 Problem
+## Problem
 When calling the endpoint:
 ```
 GET http://127.0.0.1:8000/api/students/top-performers/?limit=3
@@ -12,7 +12,7 @@ django.core.exceptions.FieldError: Cannot resolve keyword 'test' into field. Cho
 
 ---
 
-## 🧾 Root Cause
+## Root Cause
 - In the `views.py` implementation of the `top_performers` method, the queryset filter was written as:
   ```python
   Student.objects.filter(test__isnull=False)
@@ -21,12 +21,12 @@ django.core.exceptions.FieldError: Cannot resolve keyword 'test' into field. Cho
 - This means the reverse relation from `Student` → `Test` should be accessed as `tests`, not `test`.  
 
 
-## 🧪 Testing
+##  Testing
 After fixing, call the endpoint again:
 ```
 GET http://127.0.0.1:8000/api/students/top-performers/?limit=3
 ```
-✅ The API should now return the top students with their average scores.
+ The API should now return the top students with their average scores.
 
 ---
 
