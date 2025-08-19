@@ -16,7 +16,7 @@ This system allows colleges to add students, record their test scores, and fetch
 
 ### Clone & Install
 
-git clone https://github.com/<your-username>/syncify-student-tracker.git
+git clone https://github.com/DineshSharma897/Syncify-Edutech-Solutions-Code.git
 cd syncify-student-tracker
 
 python -m venv .venv
