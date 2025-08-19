@@ -12,7 +12,7 @@ This system allows colleges to add students, record their test scores, and fetch
 
 ---
 
-## ⚙ Setup Instructions
+##  Setup Instructions
 
 ### Clone & Install
 
