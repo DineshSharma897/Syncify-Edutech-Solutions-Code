@@ -135,6 +135,3 @@ Response:
 
 ---
 
-## 👨‍💻 Author
-**Dinesh Sharma**  
-Python / Django Developer | Backend | REST APIs  
