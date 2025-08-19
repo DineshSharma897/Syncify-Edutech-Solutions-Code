@@ -30,6 +30,6 @@ GET http://127.0.0.1:8000/api/students/top-performers/?limit=3
 
 ---
 
-## 📌 Notes
+## Notes
 - This issue was caused due to **incorrect related name usage** in Django ORM queries.  
 - Always check the `related_name` defined in the model when querying reverse relations.  
